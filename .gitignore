@@ -1,0 +1,41 @@
+# Archivos temporales y logs
+*.log
+*.tmp
+*.bak
+*.new
+hs_err_pid*.log
+
+# Documentación temporal
+*CAMBIOS*.md
+*DATABASE*.md
+*ENDPOINT*.md
+*ENTITIES*.md
+*MS_USERS*.md
+*POSTMAN*.md
+*QUICK*.md
+*EXAMEN*.md
+*FINAL*.md
+*INSTRUCCIONES*.md
+*DOCUMENTACION*.md
+*RESPALDO*.md
+
+# Scripts temporales
+*diagnose*.bat
+*fix*.bat
+*setup*.bat
+*start*.bat
+*test*.bat
+*verify*.bat
+*crear*.bat
+*generar*.bat
+*verificar*.bat
+*limpiar*.bat
+
+# Colecciones Postman duplicadas
+*Edutech-Complete*.json
+*Edutech-Courses-API*.json
+*Environment*.json
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
