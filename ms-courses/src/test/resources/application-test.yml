@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: ms-courses-test
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: 
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    database: h2
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+
+# Deshabilitar Eureka para pruebas
+eureka:
+  client:
+    enabled: false
+
+# Configuración del servidor para pruebas
+server:
+  port: 0  # Puerto aleatorio para evitar conflictos
