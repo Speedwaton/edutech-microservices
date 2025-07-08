@@ -1,11 +1,23 @@
-# Comandos
+Sistema de Gestión de Clases EduTech Innovators
+Descripción
+Proyecto de microservicios para la gestión de clases, cursos y usuarios.
 
-Compilar sólo el POM del padre y nada más:
-mvn install -N
+Integrantes
+Giancarlo Ovalle
+Agustin Moya
+Vicente Castro
+Arquitectura
+Diagrama de arquitectura
 
-Limpiar carpetas target:
-mvn clean
-
-Eliminar carpeta .m2
-rmdir /S /Q %USERPROFILE%\.m2
-
+Microservicios
+Servicio	Puerto	Descripción
+eureka	8761	Descubrimiento
+ms-users	9001	Gestión de usuarios
+ms-courses	9002	Gestión de cursos
+ms-grades	9003	Calificaciones
+ms-payments	9004	Pagos
+ms-support	9005	Soporte
+Instalación
+```bash
+git clone https://github.com/Speedwaton/edutech-microservices.git
+cd edutech-microservices
