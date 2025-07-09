@@ -1,0 +1,926 @@
+{
+	"info": {
+		"_postman_id": "5b4c8b6d-f3ed-4826-9a9c-a6f5d1c7e8b9",
+		"name": "Edutech - Microservicios Completos",
+		"description": "Colección completa de Postman para todos los microservicios de Edutech",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "MS-Users",
+			"item": [
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "Get All Users",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{users_base_url}}/api/users",
+									"host": ["{{users_base_url}}"],
+									"path": ["api", "users"]
+								}
+							}
+						},
+						{
+							"name": "Get User by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{users_base_url}}/api/users/1",
+									"host": ["{{users_base_url}}"],
+									"path": ["api", "users", "1"]
+								}
+							}
+						},
+						{
+							"name": "Create User",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"firstName\": \"Juan\",\n  \"lastName\": \"Pérez\",\n  \"email\": \"juan.perez@example.com\",\n  \"passwordHash\": \"hashed_password_123\",\n  \"roleId\": 1,\n  \"isActive\": true\n}"
+								},
+								"url": {
+									"raw": "{{users_base_url}}/api/users",
+									"host": ["{{users_base_url}}"],
+									"path": ["api", "users"]
+								}
+							}
+						},
+						{
+							"name": "Update User",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"firstName\": \"Juan Carlos\",\n  \"lastName\": \"Pérez López\",\n  \"email\": \"juan.carlos@example.com\",\n  \"passwordHash\": \"new_hashed_password_456\",\n  \"roleId\": 2,\n  \"isActive\": true\n}"
+								},
+								"url": {
+									"raw": "{{users_base_url}}/api/users/1",
+									"host": ["{{users_base_url}}"],
+									"path": ["api", "users", "1"]
+								}
+							}
+						},
+						{
+							"name": "Delete User",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{users_base_url}}/api/users/1",
+									"host": ["{{users_base_url}}"],
+									"path": ["api", "users", "1"]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "Roles",
+					"item": [
+						{
+							"name": "Get All Roles",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{users_base_url}}/api/roles",
+									"host": ["{{users_base_url}}"],
+									"path": ["api", "roles"]
+								}
+							}
+						},
+						{
+							"name": "Get Role by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{users_base_url}}/api/roles/1",
+									"host": ["{{users_base_url}}"],
+									"path": ["api", "roles", "1"]
+								}
+							}
+						},
+						{
+							"name": "Create Role",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Estudiante\",\n  \"description\": \"Rol para estudiantes del sistema\"\n}"
+								},
+								"url": {
+									"raw": "{{users_base_url}}/api/roles",
+									"host": ["{{users_base_url}}"],
+									"path": ["api", "roles"]
+								}
+							}
+						},
+						{
+							"name": "Update Role",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Estudiante Premium\",\n  \"description\": \"Rol para estudiantes con acceso premium\"\n}"
+								},
+								"url": {
+									"raw": "{{users_base_url}}/api/roles/1",
+									"host": ["{{users_base_url}}"],
+									"path": ["api", "roles", "1"]
+								}
+							}
+						},
+						{
+							"name": "Delete Role",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{users_base_url}}/api/roles/1",
+									"host": ["{{users_base_url}}"],
+									"path": ["api", "roles", "1"]
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "MS-Courses",
+			"item": [
+				{
+					"name": "Courses",
+					"item": [
+						{
+							"name": "Get All Courses",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{courses_base_url}}/api/courses",
+									"host": ["{{courses_base_url}}"],
+									"path": ["api", "courses"]
+								}
+							}
+						},
+						{
+							"name": "Get Course by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{courses_base_url}}/api/courses/1",
+									"host": ["{{courses_base_url}}"],
+									"path": ["api", "courses", "1"]
+								}
+							}
+						},
+						{
+							"name": "Create Course",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"Introducción a Java\",\n  \"description\": \"Curso completo de programación en Java desde cero\",\n  \"categoryId\": 1,\n  \"managerId\": 1,\n  \"instructorId\": 2,\n  \"publishDate\": \"2025-01-15\",\n  \"price\": 99.99,\n  \"image\": \"https://example.com/java-course.jpg\",\n  \"status\": \"published\"\n}"
+								},
+								"url": {
+									"raw": "{{courses_base_url}}/api/courses",
+									"host": ["{{courses_base_url}}"],
+									"path": ["api", "courses"]
+								}
+							}
+						},
+						{
+							"name": "Update Course",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"Java Avanzado\",\n  \"description\": \"Curso avanzado de programación en Java con Spring Boot\",\n  \"categoryId\": 1,\n  \"managerId\": 1,\n  \"instructorId\": 2,\n  \"publishDate\": \"2025-02-01\",\n  \"price\": 149.99,\n  \"image\": \"https://example.com/java-advanced-course.jpg\",\n  \"status\": \"published\"\n}"
+								},
+								"url": {
+									"raw": "{{courses_base_url}}/api/courses/1",
+									"host": ["{{courses_base_url}}"],
+									"path": ["api", "courses", "1"]
+								}
+							}
+						},
+						{
+							"name": "Delete Course",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{courses_base_url}}/api/courses/1",
+									"host": ["{{courses_base_url}}"],
+									"path": ["api", "courses", "1"]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "Course Categories",
+					"item": [
+						{
+							"name": "Get All Categories",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{courses_base_url}}/api/course-categories",
+									"host": ["{{courses_base_url}}"],
+									"path": ["api", "course-categories"]
+								}
+							}
+						},
+						{
+							"name": "Get Category by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{courses_base_url}}/api/course-categories/1",
+									"host": ["{{courses_base_url}}"],
+									"path": ["api", "course-categories", "1"]
+								}
+							}
+						},
+						{
+							"name": "Create Category",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Programación\",\n  \"description\": \"Cursos relacionados con programación y desarrollo de software\"\n}"
+								},
+								"url": {
+									"raw": "{{courses_base_url}}/api/course-categories",
+									"host": ["{{courses_base_url}}"],
+									"path": ["api", "course-categories"]
+								}
+							}
+						},
+						{
+							"name": "Update Category",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Desarrollo de Software\",\n  \"description\": \"Cursos especializados en desarrollo de aplicaciones y sistemas\"\n}"
+								},
+								"url": {
+									"raw": "{{courses_base_url}}/api/course-categories/1",
+									"host": ["{{courses_base_url}}"],
+									"path": ["api", "course-categories", "1"]
+								}
+							}
+						},
+						{
+							"name": "Delete Category",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{courses_base_url}}/api/course-categories/1",
+									"host": ["{{courses_base_url}}"],
+									"path": ["api", "course-categories", "1"]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "Course Contents",
+					"item": [
+						{
+							"name": "Get All Contents",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{courses_base_url}}/api/course-contents",
+									"host": ["{{courses_base_url}}"],
+									"path": ["api", "course-contents"]
+								}
+							}
+						},
+						{
+							"name": "Get Content by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{courses_base_url}}/api/course-contents/1",
+									"host": ["{{courses_base_url}}"],
+									"path": ["api", "course-contents", "1"]
+								}
+							}
+						},
+						{
+							"name": "Create Content",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"Introducción a Variables\",\n  \"description\": \"Aprende sobre variables y tipos de datos en Java\",\n  \"courseId\": 1,\n  \"orderIndex\": 1,\n  \"url\": \"https://example.com/videos/java-variables.mp4\",\n  \"contentType\": \"video\",\n  \"duration\": 1200\n}"
+								},
+								"url": {
+									"raw": "{{courses_base_url}}/api/course-contents",
+									"host": ["{{courses_base_url}}"],
+									"path": ["api", "course-contents"]
+								}
+							}
+						},
+						{
+							"name": "Update Content",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"Variables y Tipos de Datos\",\n  \"description\": \"Guía completa sobre variables, tipos de datos y declaraciones en Java\",\n  \"courseId\": 1,\n  \"orderIndex\": 1,\n  \"url\": \"https://example.com/videos/java-variables-updated.mp4\",\n  \"contentType\": \"video\",\n  \"duration\": 1500\n}"
+								},
+								"url": {
+									"raw": "{{courses_base_url}}/api/course-contents/1",
+									"host": ["{{courses_base_url}}"],
+									"path": ["api", "course-contents", "1"]
+								}
+							}
+						},
+						{
+							"name": "Delete Content",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{courses_base_url}}/api/course-contents/1",
+									"host": ["{{courses_base_url}}"],
+									"path": ["api", "course-contents", "1"]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "Course Comments",
+					"item": [
+						{
+							"name": "Get All Comments",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{courses_base_url}}/api/course-comments",
+									"host": ["{{courses_base_url}}"],
+									"path": ["api", "course-comments"]
+								}
+							}
+						},
+						{
+							"name": "Get Comment by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{courses_base_url}}/api/course-comments/1",
+									"host": ["{{courses_base_url}}"],
+									"path": ["api", "course-comments", "1"]
+								}
+							}
+						},
+						{
+							"name": "Create Comment",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"courseId\": 1,\n  \"userId\": 1,\n  \"commentText\": \"Excelente curso, muy bien explicado y con ejemplos prácticos\",\n  \"rating\": 5\n}"
+								},
+								"url": {
+									"raw": "{{courses_base_url}}/api/course-comments",
+									"host": ["{{courses_base_url}}"],
+									"path": ["api", "course-comments"]
+								}
+							}
+						},
+						{
+							"name": "Update Comment",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"courseId\": 1,\n  \"userId\": 1,\n  \"commentText\": \"Curso muy completo, recomendado para principiantes y nivel intermedio\",\n  \"rating\": 4\n}"
+								},
+								"url": {
+									"raw": "{{courses_base_url}}/api/course-comments/1",
+									"host": ["{{courses_base_url}}"],
+									"path": ["api", "course-comments", "1"]
+								}
+							}
+						},
+						{
+							"name": "Delete Comment",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{courses_base_url}}/api/course-comments/1",
+									"host": ["{{courses_base_url}}"],
+									"path": ["api", "course-comments", "1"]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "Enrollments",
+					"item": [
+						{
+							"name": "Get All Enrollments",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{courses_base_url}}/api/enrollments",
+									"host": ["{{courses_base_url}}"],
+									"path": ["api", "enrollments"]
+								}
+							}
+						},
+						{
+							"name": "Get Enrollment by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{courses_base_url}}/api/enrollments/1",
+									"host": ["{{courses_base_url}}"],
+									"path": ["api", "enrollments", "1"]
+								}
+							}
+						},
+						{
+							"name": "Create Enrollment",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"studentId\": 1,\n  \"courseId\": 1,\n  \"status\": \"active\"\n}"
+								},
+								"url": {
+									"raw": "{{courses_base_url}}/api/enrollments",
+									"host": ["{{courses_base_url}}"],
+									"path": ["api", "enrollments"]
+								}
+							}
+						},
+						{
+							"name": "Update Enrollment",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"studentId\": 1,\n  \"courseId\": 1,\n  \"status\": \"completed\"\n}"
+								},
+								"url": {
+									"raw": "{{courses_base_url}}/api/enrollments/1",
+									"host": ["{{courses_base_url}}"],
+									"path": ["api", "enrollments", "1"]
+								}
+							}
+						},
+						{
+							"name": "Delete Enrollment",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{courses_base_url}}/api/enrollments/1",
+									"host": ["{{courses_base_url}}"],
+									"path": ["api", "enrollments", "1"]
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "MS-Grades",
+			"item": [
+				{
+					"name": "Student Marks",
+					"item": [
+						{
+							"name": "Get All Student Marks",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{grades_base_url}}/api/student-marks",
+									"host": ["{{grades_base_url}}"],
+									"path": ["api", "student-marks"]
+								}
+							}
+						},
+						{
+							"name": "Get Student Mark by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{grades_base_url}}/api/student-marks/1",
+									"host": ["{{grades_base_url}}"],
+									"path": ["api", "student-marks", "1"]
+								}
+							}
+						},
+						{
+							"name": "Create Student Mark",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 1,\n  \"quizId\": 1,\n  \"studentId\": 1,\n  \"mark\": 85.5,\n  \"comments\": \"Buen desempeño, mejorar en conceptos de herencia\",\n  \"gradedAt\": \"2025-07-09T12:00:00Z\"\n}"
+								},
+								"url": {
+									"raw": "{{grades_base_url}}/api/student-marks",
+									"host": ["{{grades_base_url}}"],
+									"path": ["api", "student-marks"]
+								}
+							}
+						},
+						{
+							"name": "Update Student Mark",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 1,\n  \"quizId\": 1,\n  \"studentId\": 1,\n  \"mark\": 92.0,\n  \"comments\": \"Excelente mejora, domina bien todos los conceptos\",\n  \"gradedAt\": \"2025-07-09T15:30:00Z\"\n}"
+								},
+								"url": {
+									"raw": "{{grades_base_url}}/api/student-marks/1",
+									"host": ["{{grades_base_url}}"],
+									"path": ["api", "student-marks", "1"]
+								}
+							}
+						},
+						{
+							"name": "Delete Student Mark",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{grades_base_url}}/api/student-marks/1",
+									"host": ["{{grades_base_url}}"],
+									"path": ["api", "student-marks", "1"]
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "MS-Payments",
+			"item": [
+				{
+					"name": "Payments",
+					"item": [
+						{
+							"name": "Get All Payments",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{payments_base_url}}/api/payments",
+									"host": ["{{payments_base_url}}"],
+									"path": ["api", "payments"]
+								}
+							}
+						},
+						{
+							"name": "Get Payment by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{payments_base_url}}/api/payments/1",
+									"host": ["{{payments_base_url}}"],
+									"path": ["api", "payments", "1"]
+								}
+							}
+						},
+						{
+							"name": "Create Payment",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 1,\n  \"userId\": 1,\n  \"amount\": 99.99,\n  \"paymentDate\": \"2025-07-09T10:30:00Z\",\n  \"paymentMethod\": \"credit_card\",\n  \"paymentInstitution\": \"Visa\",\n  \"transactionId\": \"TXN_20250709_001\",\n  \"status\": \"completed\"\n}"
+								},
+								"url": {
+									"raw": "{{payments_base_url}}/api/payments",
+									"host": ["{{payments_base_url}}"],
+									"path": ["api", "payments"]
+								}
+							}
+						},
+						{
+							"name": "Update Payment",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 1,\n  \"userId\": 1,\n  \"amount\": 99.99,\n  \"paymentDate\": \"2025-07-09T10:30:00Z\",\n  \"paymentMethod\": \"debit_card\",\n  \"paymentInstitution\": \"MasterCard\",\n  \"transactionId\": \"TXN_20250709_001_UPDATED\",\n  \"status\": \"refunded\"\n}"
+								},
+								"url": {
+									"raw": "{{payments_base_url}}/api/payments/1",
+									"host": ["{{payments_base_url}}"],
+									"path": ["api", "payments", "1"]
+								}
+							}
+						},
+						{
+							"name": "Delete Payment",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{payments_base_url}}/api/payments/1",
+									"host": ["{{payments_base_url}}"],
+									"path": ["api", "payments", "1"]
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "MS-Support",
+			"item": [
+				{
+					"name": "Support Tickets",
+					"item": [
+						{
+							"name": "Get All Support Tickets",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{support_base_url}}/api/support-tickets",
+									"host": ["{{support_base_url}}"],
+									"path": ["api", "support-tickets"]
+								}
+							}
+						},
+						{
+							"name": "Get Support Ticket by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{support_base_url}}/api/support-tickets/1",
+									"host": ["{{support_base_url}}"],
+									"path": ["api", "support-tickets", "1"]
+								}
+							}
+						},
+						{
+							"name": "Create Support Ticket",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 1,\n  \"userId\": 1,\n  \"supportUserId\": null,\n  \"subject\": \"Problema con acceso al curso\",\n  \"description\": \"No puedo acceder al contenido del curso de Java después del pago\",\n  \"status\": \"open\",\n  \"createdAt\": \"2025-07-09T08:00:00Z\",\n  \"closedAt\": null\n}"
+								},
+								"url": {
+									"raw": "{{support_base_url}}/api/support-tickets",
+									"host": ["{{support_base_url}}"],
+									"path": ["api", "support-tickets"]
+								}
+							}
+						},
+						{
+							"name": "Update Support Ticket",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 1,\n  \"userId\": 1,\n  \"supportUserId\": 3,\n  \"subject\": \"Problema con acceso al curso - RESUELTO\",\n  \"description\": \"Problema resuelto: se actualizaron los permisos de acceso al contenido\",\n  \"status\": \"resolved\",\n  \"createdAt\": \"2025-07-09T08:00:00Z\",\n  \"closedAt\": \"2025-07-09T14:30:00Z\"\n}"
+								},
+								"url": {
+									"raw": "{{support_base_url}}/api/support-tickets/1",
+									"host": ["{{support_base_url}}"],
+									"path": ["api", "support-tickets", "1"]
+								}
+							}
+						},
+						{
+							"name": "Delete Support Ticket",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{support_base_url}}/api/support-tickets/1",
+									"host": ["{{support_base_url}}"],
+									"path": ["api", "support-tickets", "1"]
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Eureka Server",
+			"item": [
+				{
+					"name": "Get Registered Services",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{eureka_base_url}}/eureka/apps",
+							"host": ["{{eureka_base_url}}"],
+							"path": ["eureka", "apps"]
+						}
+					}
+				},
+				{
+					"name": "Get Eureka Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{eureka_base_url}}/",
+							"host": ["{{eureka_base_url}}"],
+							"path": [""]
+						}
+					}
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "users_base_url",
+			"value": "http://localhost:9002",
+			"type": "string"
+		},
+		{
+			"key": "courses_base_url",
+			"value": "http://localhost:9001",
+			"type": "string"
+		},
+		{
+			"key": "grades_base_url",
+			"value": "http://localhost:9003",
+			"type": "string"
+		},
+		{
+			"key": "payments_base_url",
+			"value": "http://localhost:9004",
+			"type": "string"
+		},
+		{
+			"key": "support_base_url",
+			"value": "http://localhost:9005",
+			"type": "string"
+		},
+		{
+			"key": "eureka_base_url",
+			"value": "http://localhost:8761",
+			"type": "string"
+		}
+	]
+}
